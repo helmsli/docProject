@@ -1,0 +1,17 @@
+1、项目中引入该文件夹所有依赖的jar
+2、目前支持文件绝对路径和doc文件的输入流2种方式
+3、使用例子如下：
+
+
+public static void main(String[] args) {
+		DocReader reader = new DocReader();
+		String srcPath = "2017年福彩金项目申报书.doc";//文件路径
+		try {
+			ProjectInfo readDoc = reader.readDoc(srcPath);
+
+			System.out.println(readDoc);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
